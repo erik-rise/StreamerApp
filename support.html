@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Streamer Support</title><style>
+:root{--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--line:#e5e5ea;--accent:#0a66d8}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f7;--muted:#a1a1a6;--line:#2c2c2e;--accent:#4c9bff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 16px 64px}h1{font-size:32px;line-height:1.2;margin:0 0 4px}h2{font-size:22px;margin:36px 0 8px}
+h3{font-size:18px;margin:24px 0 4px}p,li{color:var(--fg)}.muted{color:var(--muted);font-size:15px}a{color:var(--accent)}
+nav{display:flex;gap:16px;font-size:15px;margin-bottom:28px}hr{border:0;border-top:1px solid var(--line);margin:48px 0}ul{padding-left:22px}
+code{font:14px ui-monospace,Menlo,monospace;background:var(--line);padding:1px 5px;border-radius:4px}
+</style></head>
+<body><main>
+<nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="#sv">Svenska</a></nav>
+
+<h1>Streamer Support</h1>
+<p>Need help? Email <a href="mailto:dev@rise.se">dev@rise.se</a>, or use <strong>Help → Report a Problem…</strong> in the app (it can attach a log that helps us find the cause). You can also report bugs and suggest features on <a href="https://github.com/erik-rise/StreamerApp/issues">GitHub</a>.</p>
+
+<h2>My TV doesn't show up</h2>
+<ul>
+<li>The Mac and the TV must be on the same network. Guest networks and some mesh or business networks keep devices apart.</li>
+<li>Allow local network access: <strong>System Settings → Privacy &amp; Security → Local Network → Streamer</strong>.</li>
+<li>If your network uses separate VLANs for TVs, the TV must be able to reach the Mac (TCP) and discovery (Bonjour/mDNS for Apple TV and Cast, SSDP for DLNA) must pass between them.</li>
+<li>Smart TVs (DLNA): turn the TV on (not standby) and make sure media sharing / DLNA is enabled. You can also add the TV by its IP address from the device menu.</li>
+</ul>
+
+<h2>The video doesn't start or stops</h2>
+<ul>
+<li>Restart the TV or Apple TV. A hung AirPlay receiver is the most common cause.</li>
+<li>Try a lower quality in <strong>Settings → Stream quality</strong> if your Wi-Fi is slow.</li>
+<li>Keep the Mac awake and on power. Closing a laptop lid always puts it to sleep.</li>
+</ul>
+
+<h2>Sound and picture aren't in sync</h2>
+<p>Use <strong>Playback → Audio 10 ms Earlier/Later</strong> (⌥⌘[ and ⌥⌘]). The setting is saved for each TV.</p>
+
+<h2>Subtitles</h2>
+<ul>
+<li>Subtitles inside the file and .srt/.vtt files next to the video are found automatically.</li>
+<li>To translate subtitles or create them from speech, right-click a video and choose <strong>Subtitles → Create Subtitles…</strong>. Everything happens on your Mac. The first time you create subtitles from speech, Streamer downloads its speech model (about 574 MB). You can start watching right away; the subtitles fill in while the video plays.</li>
+</ul>
+
+<h2>Purchases</h2>
+<p>The first 10 minutes of every video are free. Start the free 7-day trial or unlock the full version in <strong>Streamer → Unlock Full Version…</strong>. Changed Mac? Use <strong>Restore Purchases</strong>.</p>
+
+<h2>Open source</h2>
+<p>Streamer includes <a href="https://ffmpeg.org">FFmpeg</a> 7.1.1, unmodified, licensed under the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU LGPL v2.1</a> and run as a separate helper program. Source code: <a href="https://ffmpeg.org/releases/ffmpeg-7.1.1.tar.xz">ffmpeg-7.1.1.tar.xz</a>. Build configuration: <a href="build-ffmpeg.sh">build-ffmpeg.sh</a>. Streamer also uses whisper.cpp and CTranslate2 (MIT), SentencePiece and the OPUS-MT translation models (Apache 2.0); the full licence texts are in the app under <strong>Streamer → Settings… → About → Third-Party Licenses</strong>.</p>
+
+<hr id="sv">
+<h1>Support för Streamer</h1>
+<p>Behöver du hjälp? Mejla <a href="mailto:dev@rise.se">dev@rise.se</a> eller använd <strong>Hjälp → Rapportera ett problem…</strong> i appen. Du kan också rapportera fel och föreslå funktioner på <a href="https://github.com/erik-rise/StreamerApp/issues">GitHub</a>.</p>
+<h3>Tv:n syns inte</h3>
+<ul>
+<li>Macen och tv:n måste vara i samma nätverk. Gästnätverk och vissa företags- och mesh-nätverk håller isär enheter.</li>
+<li>Tillåt lokalt nätverk: <strong>Systeminställningar → Integritet och säkerhet → Lokalt nätverk → Streamer</strong>.</li>
+<li>Smart-tv (DLNA): slå på tv:n (inte vänteläge) och kontrollera att mediadelning/DLNA är på. Du kan också lägga till tv:n med IP-adress i enhetsmenyn.</li>
+</ul>
+<h3>Videon startar inte eller stannar</h3>
+<p>Starta om tv:n eller Apple TV. Prova lägre kvalitet i <strong>Inställningar → Strömningskvalitet</strong>. Låt Macen vara vaken och ansluten till ström.</p>
+<h3>Ljud och bild i otakt</h3>
+<p><strong>Uppspelning → Ljud 10 ms tidigare/senare</strong> (⌥⌘[ och ⌥⌘]). Inställningen sparas per tv.</p>
+<h3>Undertexter</h3>
+<p>Högerklicka på en video och välj <strong>Undertexter → Skapa undertexter…</strong> för att översätta eller skapa undertexter från tal. Allt sker på din Mac. Första gången du skapar undertexter från tal hämtar Streamer sin talmodell (cirka 574 MB). Du kan börja titta direkt – undertexterna fylls i medan videon spelas.</p>
+<h3>Köp</h3>
+<p>De första 10 minuterna av varje video är gratis. Provperiod och fullversion finns under <strong>Streamer → Lås upp fullversionen…</strong>. Ny Mac? Välj <strong>Återställ köp</strong>.</p>
+
+</main></body></html>
